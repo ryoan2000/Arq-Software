@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class Filme {
 	private int id;
+
 	private String titulo;
 	private String descricao;
 	private double popularidade;
