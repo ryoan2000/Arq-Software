@@ -9,6 +9,9 @@
 		<!-- entidade mapeada -->
 		<class>br.usjt.arqsw18.pipoca.model.entity.Filme</class>
 		<class>br.usjt.arqsw18.pipoca.model.entity.Genero</class>
+		<class>br.usjt.arqsw18.pipoca.model.entity.Usuario</class>
+		
+		
 		<properties>
 			<!-- dados da conexao -->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />

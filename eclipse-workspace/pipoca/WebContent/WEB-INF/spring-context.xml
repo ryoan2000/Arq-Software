@@ -11,6 +11,9 @@
 	<context:component-scan base-package="br.usjt.arqsw18.pipoca" />
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler />
+	<mvc:interceptors>
+		<bean class="br.usjt.arqsw18.pipoca.interceptor.AutorizadorInterceptor"/>
+	</mvc:interceptors>
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
