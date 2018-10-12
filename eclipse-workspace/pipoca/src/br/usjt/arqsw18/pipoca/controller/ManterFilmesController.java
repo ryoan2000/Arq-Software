@@ -1,3 +1,4 @@
+//Novo
 package br.usjt.arqsw18.pipoca.controller;
 
 import java.io.IOException;
@@ -181,5 +182,19 @@ public class ManterFilmesController {
 		}
 	}
 
+	@RequestMapping("/carregar_filmes")
+	public String carregarFilmes() {
+		try {
+			fService.carregarFilmes();
+			return "redirect:listar_filmes";
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return "Erro";
+		
+		
+	}
 
 }

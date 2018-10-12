@@ -13,7 +13,6 @@ import br.usjt.arqsw18.pipoca.model.entity.Filme;
 
 @Repository
 public class FilmeDAO {
-	// Pegando esse Entity manager do Spring-context
 	@PersistenceContext
 	EntityManager manager;
 	
@@ -38,7 +37,6 @@ public class FilmeDAO {
 
 	public List<Filme> listarFilmes(String chave) throws IOException {
 		
-		// O : antes do chave serve como o "?"
 		String jpql = "select f from Filme f where f.titulo like :chave";
 		
 		Query query = manager.createQuery(jpql);
@@ -53,3 +51,11 @@ public class FilmeDAO {
 	}
 
 }
+
+
+
+
+
+
+
+

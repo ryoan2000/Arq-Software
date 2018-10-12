@@ -31,7 +31,7 @@ public class Filme {
 	@Max(value=100)
 	@Min(value=1)
 	private double popularidade;
-	@JsonFormat(pattern = "dd/MM/yyyy")
+	@JsonFormat(pattern="dd/MM/yyyy")
 	@Temporal(value = TemporalType.DATE)
 	private Date dataLancamento;
 	@Size(max=200, message="Tamanho entre 1 e 200 caracteres")

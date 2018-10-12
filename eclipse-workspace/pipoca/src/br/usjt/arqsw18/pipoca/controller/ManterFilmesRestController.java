@@ -22,7 +22,6 @@ public class ManterFilmesRestController {
 	@Autowired
 	private GeneroService gService;
 	
-	// Lista todos os filmes
 	@RequestMapping(method=RequestMethod.GET, value="rest/filmes")
 	public List<Filme> listarFilmes(){
 		try {
@@ -33,17 +32,15 @@ public class ManterFilmesRestController {
 		return null;
 	}
 	
-	//Request Body é para o JSON
 	@RequestMapping(method=RequestMethod.POST, value="rest/filmes")
 	public ResponseEntity<Filme> criarFilme(@RequestBody Filme filme) {
 		try {
 			System.out.println(filme);
-			filme =  fService.inserirFilme(filme);
+			filme = fService.inserirFilme(filme);
 			return new ResponseEntity<Filme>(filme, HttpStatus.OK);
 		} catch (IOException e) {
 			e.printStackTrace();
 			return new ResponseEntity<Filme>(filme, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-		
 	}
 }
